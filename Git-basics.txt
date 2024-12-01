@@ -1,0 +1,170 @@
+VCS
+git, bitbucket, perforce
+
+local repository
+central
+distributed
+
+install git in linux:
+
+sudo su -
+---------------------
+install: yum install git
+git --version
+-------------------------
+
+start with introuuce your self to Git. when ever you push changes, git uses this info to track the changes made by you
+
+git config --global user.name "Ganesh"
+git config --global user.email "ganesh.aws@gmail.com"
+
+this is one time activity... you can change it whenever you want if required.
+
+display.. git config --global user.name
+git config --global user.email
+
+
+git config --list ( all configs will be displayed)
+------------------------------------
+
+How to create git repository:
+=============================
+
+what is repository:
+
+crate repository: go to the path where you want to create and create a new folder. name it as demorepo
+
+here you need to initialis this folder as a repository.
+
+got to the path and right click "GitBash here"
+
+and run the command "git init ." 
+
+when you run "git init ." it initializes the current directory as the git repository...
+
+After this whatever you make changes in this directory everything will be tracked
+----------------------------------
+Git Stages:
+
+creating just a file inside the folder it will track but doesn't add that file to the repository. We need to follw certain procedure to add it to the repository.
+
+working directory
+-> git add ( this command addes files to staging area from workingarea)
+git add filename
+git add .
+git add --all
+
+
+Staging area (index area)
+-> git commit (to add files to local repository)
+
+git log => shows you what commits you have done. whether you committed your changes or not (commit history)
+
+ex: git commit -m "Need to specify what changes you are commiting"
+local repository (local VCS)
+
+==> git status -> will show you where the files present in which area (working(untracked files - shows in red color)/staging (traked files- changes to be commited - green)/repository)? shows current stage of repository.
+
+
+---------------------------------------------------
+
+comapring the file changes between these areas:
+============================================
+
+staging and working area files comarision:
+=> git diff 
+a - working area
+b - staging
+
+local and staging area files comparision:
+
+=> git diff --staged
+
+git diff --staged HEAD ( comapre the between between staging and local repository)
+
+compare between --working directory with local repository:
+
+=> git diff HEAD
+
+----------------------------------------------------------------
+
+
+compare the difference between commit commands:
+==============================
+
+=> git diff latestcommit-id1 oldercoomit-id2
+
+
+----------------------------------------------------------------
+================================================================================
+Now -> Lets start sharing the local repository code to the Remote repository (Github)
+=================================================================================
+
+
+GitHub: code hosting platform, where we can host the repositories, so that otehr developers can use the repository to continue their coding work in collaboratievely
+
+GitHub account: awsstorageXX
+
+create repository on gitHub
+===========================
+login to account -> new repository "accountname/Reponame"
+public / private 
+
+
+Cloning a reop from GitHUb to local system:
+============================================
+
+git/clone or pull
+
+GitHub -> Git (local system) - (clone)
+
+=> git clone <repo name>
+ex: git clone https://github.com/ravdy/vtgitrepo.git
+
+Git -> GitHub (push)
+
+=> git push origin master
+
+git add .
+git commit -m "adding project1 to local"
+
+git status
+
+git push origin master
+
+
+---------------
+
+git clone reponamehttpurl
+
+configuring credentails 
+
+git push origin master
+it will ask for credentails. bcz, credentials not stored in the developer2 machine..
+
+GitHUb is a public repository, if someone want to modify you need permission from the author of the repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
