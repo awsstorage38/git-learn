@@ -144,6 +144,37 @@ it will ask for credentails. bcz, credentials not stored in the developer2 machi
 
 GitHUb is a public repository, if someone want to modify you need permission from the author of the repository.
 
+------------------------
+Git PULL: if repository is not present in your system then we use clone. if Reposity is present and only to download the changes from the remote repository use git pull command.
+==========
+=> git pull
+
+
+When there is new commits added by developer 2 and devloper1 try to push without pull, he will experenice error. When you pull, extra merge branch commit and two commits will be pused to the remote.
+
+
+
+=======================================
+connecting to github using SSH:
+=======================================
+
+key based authentication: generate keys..
+
+ssh-keygen -t -rsa -b 4096 -C "
+
+ssh-keygen => it generates two keys pirvate and public. copy the public key to the githubaccount
+
+=> run the agent
+=> add ssh private key to sshagent
+
+==> Now add the public key to github repositiory.
+
+git clone sshurllinkfromgitbhub
+
+
+
+
+
 
 
 
