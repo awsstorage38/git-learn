@@ -1,0 +1,116 @@
+Iac
+
+repeatability
+auditability
+change controle
+collaboration
+
+IAC - infrastrucre as code
+CM - configuration management (ansible/puppet)
+Iaas - Infrastruce as a service(aws/azure/gcp)
+Paas - Platform as a service
+VCS - Version controle system (git)
+CI / CD - Continuous Integration / Contunious deployment or delivery
+SDLC - software development life cycle (process of developing software)
+Declarative (declares what you want) 
+Imperative (
+
+Declarative vs Imparative : 
+Imperative - procedural approach , this whould address questions about how yoru infra gets to the state you want to be
+ex: AWS CLI tool or python with boto will allow you to manipulate aws apis. 
+
+Declarative: addresses the questions of what your infra to be.
+
+ex: AWS cloudformation: Terraform
+
+---------------------------------------
+
+SDLC:
+
+Requirements -> Design -> Imlementation -> Testing -> Deployment -> Maintenance ->
+
+----------------------------------------
+
+what is terraform?
+it is a command line tool and it is a declarative infrastruce as code.
+we declare the resources in terraform config it makes sures the resource is created in cloud providrer, if you delete from config, terraform delte them from the cloudprovider.
+
+it is also online service.
+
+terraform uses config 
+
+config - the way tf stores config series of files, these files creates something called modules. you will be creatingi t to manage infra
+
+state - is a file like a database. it willbe stored in locally, remote backend (s3,terraform cloud). state file is terraform view of the world. terraform looks at state file to determine what is running in the cloud.
+
+------------------------------------------------
+
+Terraform install:
+https:terraform.io
+download cli
+
+the other way of installation is usng docker as shown below:
+
+docker pull hashicorp/terraform:latest
+
+
+docker pull hasicorp/terraform:1..7.5
+
+docker run terrform:0.12.13 --version
+
+-------------------------------------------------
+
+init - initialize terraform working directory. (download terraform providers or they are already exists)
+
+plan - plan compares the config with the state file. and shows you what it is going to do.
+
+apply -- 
+
+destroy -- it tells tf to delete the state file to delete all the resources in the cloud.
+
+get - downalod installs modules
+graph- display dependecy tree
+
+import - if you resuors are created without using tf, then using import you can manage those resources using import.
+
+output - display the output of tf configuraion
+
+providers - 
+
+refresh - update local state files.
+
+show - display some information about state or plan file.
+taint - 
+
+---------------------------------------------
+
+Using Terraform:
+=================
+
+=> hasicorp config language (HCL) its not json its own domain specific lanugage called HCl.
+
+=> .tf extention.
+
+terraform init
+
+main.tf
+
+output "greeting"{
+	value = "Hello Terraform."
+}
+
+provider "random"
+
+=> terraform init
+
+=> terraform plan
+=> terraform apply
+
+-----------------------------
+
+
+
+
+
+
+

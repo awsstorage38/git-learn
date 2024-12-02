@@ -86,6 +86,8 @@ compare between --working directory with local repository:
 
 => git diff HEAD
 
+
+git diff HEAD HEAD~1 => compares the latest commit and just previous to that commit
 ----------------------------------------------------------------
 
 
@@ -170,6 +172,27 @@ ssh-keygen => it generates two keys pirvate and public. copy the public key to t
 ==> Now add the public key to github repositiory.
 
 git clone sshurllinkfromgitbhub
+
+
+=====================================
+
+local repo to github -> new repository upload from local to remote.
+
+config file to check the remote repository.
+
+create repository in the github account and associate that with the local repository. name can be anything, it should not match with the local repositiry name.
+
+git branch -M master
+git remote add origin reposityrul
+
+=============================
+How can I caheck what changes were made in a particular commit:
+
+=> git show <sha code/commitid>
+
+how many people made changes to a file. this helps to audit a file changes
+
+=> git annotate filename
 
 
 
